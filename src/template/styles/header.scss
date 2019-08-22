@@ -1,0 +1,67 @@
+@import 'variables';
+
+
+nav {
+    position: fixed;
+    top:0;
+    left:0;
+    right: 0;
+    display: grid;
+    grid-auto-flow: column;
+    padding: 10px 20px;
+    align-items: center;
+    background: #333;
+    place-content: space-between;
+    body.dark & {
+        border-bottom: 1px solid #5a5a5a;
+    }
+    .brand a{
+        all:unset;
+        color: #fff;
+        cursor: pointer;
+        &::after {
+            content: "\2668";
+            margin-left: 2px;
+        }
+    }
+    .links ul {
+        list-style: none;
+        margin-left: 25px;
+        li{
+            display: inline-block;
+            a{
+                all: unset;
+                display: block;
+                color: #f9f9f9;
+                font-size: 11px;
+                font-weight: 100;
+                transition: opacity .3s ease;
+                cursor: pointer;
+                &:hover{
+                    opacity: .7;
+                }
+            }
+            button {
+                all: unset;
+                border: 1px solid #f9f9f9;
+                font-size: 11px;
+                display: inline-block;
+                padding: 3px 10px;
+                color: #fff;
+                text-align: center;
+                transition: background-color .3s ease, color .2s ease-in-out;
+                cursor: pointer;
+                &:hover {
+                    background: #fff;
+                    color: #333;
+                }
+            }
+        }
+        li:not(:last-child){
+            margin-right: 10px;
+        }
+    }
+}
+
+
+

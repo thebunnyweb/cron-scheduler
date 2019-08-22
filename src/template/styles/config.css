@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  font-family: 'Lato', sans-serif;
+}
+
+a, button {
+  cursor: pointer;
+}
+/*# sourceMappingURL=config.css.map */
