@@ -9,7 +9,7 @@
     <title>Document</title>
 </head>
 
-<body class="light">
+<body class="dark">
     <header>
         <nav>
             <div class="brand">
@@ -27,8 +27,18 @@
         </nav>
     </header>
     <main id="root">
-        <section id="jobs">
-
+        <section id="controls">
+            <h1>Jobs for Scheduler</h1>
+            <form id="controls-form" action="#" method="POST" >
+                <div class="group">
+                    <input type="date" placeholder="Job Date" value="2019-08-22"/>
+                </div>
+                <div class="group">
+                        <input type="text" placeholder="Job Name" />
+                </div>
+                <button role="submit">Search</button>  
+                  
+            </form>
         </section>
     </main>
     
