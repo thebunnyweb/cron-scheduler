@@ -114,8 +114,8 @@ main section#controls form {
   width: 100%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 6fr 1fr;
-      grid-template-columns: 1fr 6fr 1fr;
+  -ms-grid-columns: 1fr 6fr (1fr)[2];
+      grid-template-columns: 1fr 6fr repeat(2, 1fr);
   -webkit-column-gap: 10px;
           column-gap: 10px;
 }
@@ -140,19 +140,110 @@ main section#controls form .group {
   display: inline-block;
 }
 
+main section#controls form .group span {
+  font-size: 11px;
+}
+
+body.dark main section#controls form .group span {
+  color: #f9f9f9;
+}
+
 main section#controls form button {
   all: unset;
   background: #333;
-  text-align: left;
+  text-align: center;
   font-size: 13px;
   color: #f9f9f9;
+  height: 33px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
   -webkit-box-shadow: 0px 0px 13px 1px rgba(0, 0, 0, 0.4);
           box-shadow: 0px 0px 13px 1px rgba(0, 0, 0, 0.4);
-  padding: 0 0 0 10px;
 }
 
 body.dark main section#controls form button {
   border: 1px solid #f9f9f9;
+}
+
+main section#statuschart table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+main section#statuschart table thead {
+  background: #333;
+  color: #f9f9f9;
+  font-size: 14px;
+}
+
+body.dark main section#statuschart table thead {
+  background: #777;
+}
+
+main section#statuschart table thead tr th {
+  padding: 10px 0px;
+  border: 1px solid #5a5a5a;
+}
+
+main section#statuschart table tbody {
+  background: #eaeaea;
+}
+
+body.dark main section#statuschart table tbody {
+  background: #424242;
+  color: #f9f9f9;
+}
+
+main section#statuschart table tbody tr:first-child td {
+  padding: 0;
+}
+
+main section#statuschart table tbody tr:first-child input {
+  width: 100%;
+  border: 0;
+  padding: 3px 8px;
+  background: #f3f3f3;
+  color: #000;
+}
+
+body.dark main section#statuschart table tbody tr:first-child input {
+  background: #c1c1c1;
+}
+
+main section#statuschart table tbody tr td {
+  font-size: 12px;
+  padding: 4px 0px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+body.dark main section#statuschart table tbody tr td {
+  border: 1px solid #616060;
+}
+
+main section#statuschart table tbody tr td.run {
+  background-color: #4747d4;
+  color: #f9f9f9;
+}
+
+main section#statuschart table tbody tr td.done {
+  background-color: green;
+  color: #f9f9f9;
+}
+
+main section#statuschart table tbody tr td.fail {
+  background-color: red;
+  color: #f9f9f9;
+}
+
+main section#statuschart table tbody tr:first-child td:first-child {
+  padding-left: 0px;
+}
+
+main section#statuschart table tbody tr td:first-child {
+  width: 50%;
+  text-align: left;
+  padding-left: 10px;
 }
 
 body.light {
