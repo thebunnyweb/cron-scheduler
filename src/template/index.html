@@ -9,7 +9,7 @@
     <title>Document</title>
 </head>
 
-<body class="light">
+<body class="dark">
     <header>
         <nav>
             <div class="brand">
@@ -27,8 +27,58 @@
         </nav>
     </header>
     <main id="root">
-        <section id="jobs">
-
+        <section id="controls">
+            <h1>Jobs for Scheduler</h1>
+            <form id="controls-form" action="#" method="POST" >
+                <div class="group">
+                    <span>Date</span>
+                    <input type="date" placeholder="Job Date" value="2019-08-22"/>
+                </div>
+                <div class="group">
+                        <span>Job Name</span>
+                        <input type="text" placeholder="Job Name" />
+                </div>
+                <button role="reset">Reset</button>  
+                <button role="submit">Search</button>  
+            </form>
+        </section>
+        <section id="statuschart">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Jobname</th>
+                        <th>Status</th>
+                        <th>Starttime</th>
+                        <th>Endtime</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="text" id="jobfilter"/></td>
+                        <td><input type="text" id="statusfilter"/></td>
+                        <td><input type="text" id="starttimefilter"/></td>
+                        <td><input type="text" id="endtimefilter"/></td>
+                    </tr>
+                    <tr>
+                        <td>/jobs/mycoso/dbbackup/backupall</td>
+                        <td class="run">Running</td>
+                        <td>10:00:09 PM IST</td>
+                        <td>10:03:01 PM IST</td>
+                    </tr>
+                    <tr>
+                            <td>/jobs/mycoso/dbbackup/backup_customers</td>
+                            <td class="fail">Failed</td>
+                            <td>10:00:09 PM IST</td>
+                            <td>10:03:01 PM IST</td>
+                        </tr>
+                        <tr>
+                                <td>/jobs/mycoso/dbbackup/backup_requestsamples</td>
+                                <td class="done">Done</td>
+                                <td>10:00:09 PM IST</td>
+                                <td>10:03:01 PM IST</td>
+                            </tr>
+                </tbody>
+            </table>
         </section>
     </main>
     

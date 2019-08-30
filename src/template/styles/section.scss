@@ -1,0 +1,125 @@
+main {
+    padding-top: 40px;
+    section{
+        padding: 10px 50px;
+    }
+    section#controls {
+        h1{
+            margin-bottom: 10px;
+            body.dark & {
+                color: #b7b5b5;
+            }
+        }
+        form {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 6fr repeat(2, 1fr);
+            column-gap: 10px;
+            input  {
+                padding: 10px 8px;
+                border: 1px solid #a0a0a0;
+                font-family: 'Lato', sans-serif;
+                height: 33px;
+                color: #212121;
+                font-size: 14px;
+                width: 100%;
+                display: block;
+            body.dark &{
+                background: #868686;
+                color: #f1f0f0;
+            }
+            }
+            
+            .group{
+                display: inline-block;
+                span{
+                    font-size: 11px;
+                    body.dark &{
+                        color: #f9f9f9;
+                    }
+                }
+            }
+            button
+            {
+                all: unset;
+                background: #333;
+                text-align: center;
+                font-size: 13px;
+                color: #f9f9f9;
+                height: 33px;
+                align-self: flex-end;
+                box-shadow: 0px 0px 13px 1px rgba(0,0,0,.4);
+            body.dark & {
+                border: 1px solid #f9f9f9;
+                }
+            }
+        }
+    }
+    section#statuschart{
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            thead {
+                background: #333;
+                color: #f9f9f9;
+                font-size: 14px;
+                body.dark &{
+                    background: #777;   
+                }
+                tr th{
+                    padding: 10px 0px;
+                    border: 1px solid #5a5a5a;  
+                }
+            }
+            tbody{
+                background: #eaeaea;
+                body.dark & {
+                    background: #424242;
+                    color: #f9f9f9;
+                }
+                tr:first-child td{
+                    padding:0;
+                }
+                tr:first-child input{
+                    width:100%;
+                    border:0;
+                    padding:3px 8px;
+                    background: #f3f3f3;
+                    color: #000;
+                    body.dark &{
+                        background: #c1c1c1;
+                    }
+                }
+                tr td{
+                    font-size: 12px;
+                    padding: 4px 0px;
+                    border: 1px solid #ccc;
+                    text-align: center;
+                    body.dark &{
+                        border: 1px solid #616060;
+                    }
+                    &.run{
+                        background-color: #4747d4;
+                        color: #f9f9f9;
+                    }
+                    &.done{
+                        background-color: green;
+                        color: #f9f9f9;
+                    }
+                    &.fail{
+                        background-color: red;
+                        color: #f9f9f9;
+                    }
+                }
+                tr:first-child td:first-child{
+                    padding-left: 0px;
+                }
+                tr td:first-child{
+                    width:50%;
+                    text-align: left;
+                    padding-left: 10px
+                }
+            }   
+        } 
+    }
+}
