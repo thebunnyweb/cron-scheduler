@@ -1,0 +1,3 @@
+{
+    "script": "/jobs/mycoso/dbbackup/backup.js -- --table=user --db=firbase"
+}
