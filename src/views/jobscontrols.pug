@@ -3,9 +3,9 @@ section#controls
     form(id="controls-form", action="/jobsearch" ,method="POST")
         .group
             span Date
-            input(type="text", placeholder="Job Date", value="2019-08-22")
+            input(type="date", placeholder="Job Date", value="2019-08-22", name="jobdate")
         .group
             span Job Name
-            input(type="text", placeholder="Job Name")
+            input(type="text", placeholder="Job Name", name="jobname")
         button(role="reset") Reset
         button(role="submit") Search
