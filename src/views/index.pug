@@ -1,0 +1,12 @@
+- var heading = title || 'None'
+html
+    head
+        link(rel="stylesheet", href="/styles/main.css")
+    body
+        include header.pug
+        p= heading
+        main
+            include jobscontrols.pug
+            include jobactions.pug
+            include jobtable.pug
+    script(src="/js/main.js")
