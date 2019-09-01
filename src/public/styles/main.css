@@ -1,3 +1,99 @@
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  font-family: 'Lato', sans-serif;
+}
+
+a, button {
+  cursor: pointer;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: column;
+  padding: 10px 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #333;
+  place-content: space-between;
+}
+
+body.dark nav {
+  border-bottom: 1px solid #5a5a5a;
+}
+
+nav .brand a {
+  all: unset;
+  color: #fff;
+  cursor: pointer;
+}
+
+nav .brand a::after {
+  content: "\2668";
+  margin-left: 2px;
+}
+
+nav .links ul {
+  list-style: none;
+  margin-left: 25px;
+}
+
+nav .links ul li {
+  display: inline-block;
+}
+
+nav .links ul li a {
+  all: unset;
+  display: block;
+  color: #f9f9f9;
+  font-size: 11px;
+  font-weight: 100;
+  -webkit-transition: opacity .3s ease;
+  transition: opacity .3s ease;
+  cursor: pointer;
+}
+
+nav .links ul li a:hover {
+  opacity: .7;
+}
+
+nav .links ul li button {
+  all: unset;
+  border: 1px solid #f9f9f9;
+  font-size: 11px;
+  display: inline-block;
+  padding: 3px 10px;
+  color: #fff;
+  text-align: center;
+  -webkit-transition: background-color .3s ease, color .2s ease-in-out;
+  transition: background-color .3s ease, color .2s ease-in-out;
+  cursor: pointer;
+}
+
+nav .links ul li button:hover {
+  background: #fff;
+  color: #333;
+}
+
+nav .links ul li:not(:last-child) {
+  margin-right: 10px;
+}
+
 main {
   padding-top: 40px;
 }
@@ -181,4 +277,14 @@ main section#statuschart table tbody tr td:first-child {
   text-align: left;
   padding-left: 10px;
 }
-/*# sourceMappingURL=section.css.map */
+
+body.light {
+  background-color: #f9f9f9;
+}
+
+body.dark {
+  -webkit-transition: background-color .3s ease-in-out;
+  transition: background-color .3s ease-in-out;
+  background-color: #333;
+}
+/*# sourceMappingURL=main.css.map */

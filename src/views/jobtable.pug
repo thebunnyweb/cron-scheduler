@@ -1,0 +1,33 @@
+section#statuschart
+  table
+    thead
+      tr
+        th Jobname
+        th Status
+        th Starttime
+        th Endtime
+    tbody
+      tr
+        td
+          input#jobfilter(type='text')
+        td
+          input#statusfilter(type='text')
+        td
+          input#starttimefilter(type='text')
+        td
+          input#endtimefilter(type='text')
+      //- tr
+      //-   td /jobs/mycoso/dbbackup/backupall
+      //-   td.run Running
+      //-   td 10:00:09 PM IST
+      //-   td 10:03:01 PM IST
+      //- tr
+      //-   td /jobs/mycoso/dbbackup/backup_customers
+      //-   td.fail Failed
+      //-   td 10:00:09 PM IST
+      //-   td 10:03:01 PM IST
+      //- tr
+      //-   td /jobs/mycoso/dbbackup/backup_requestsamples
+      //-   td.done Done
+      //-   td 10:00:09 PM IST
+      //-   td 10:03:01 PM IST

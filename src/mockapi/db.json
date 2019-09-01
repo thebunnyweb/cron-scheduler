@@ -1,0 +1,31 @@
+{
+    "jobs":[
+        {
+            "id": 1,
+            "path": "/cronfiles/mycoso/dbbackup/backup",
+            "scheduled": false,
+            "zone": "Asia/Kolkata",
+            "rundays": "a",
+            "runtime": "22:00"
+        },
+        {
+            "id": 2,
+            "path": "/cronfiles/mycoso/dbbackup/backup",
+            "scheduled": true,
+            "zone": "Asia/Kolkata",
+            "rundays": "a",
+            "runtime": "22:00"
+        },
+        {
+            "id": 3,
+            "path": "/cronfiles/mycoso/dbbackup/backupall",
+            "scheduled": false,
+            "zone": "Asia/Kolkata",
+            "rundays": "a",
+            "runtime": "22:00"
+        }
+    ],
+    "jobsstatus": [
+
+    ]
+}
