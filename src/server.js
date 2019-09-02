@@ -7,6 +7,7 @@ import './config/firebase';
 import firebase from 'firebase';
 import {fetchJobs} from './middlewares/helpers'
 import modules from './modules/routes';
+import {masterJobScheduler} from './middlewares/helpers'
 
 const app = express();
 const port = constants.PORT;
@@ -18,4 +19,5 @@ modules(app)
 
 app.listen(port, (err)=>{
     if(!err) console.log(`App running on ${port}`)
+    masterJobScheduler();
 });
