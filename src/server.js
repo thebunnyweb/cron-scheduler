@@ -11,7 +11,6 @@ import modules from './modules/routes';
 const app = express();
 const port = constants.PORT;
 const baseDir = path.resolve(__dirname, '');
-const db = firebase.firestore();
 
 middlewares(app, baseDir);
 modules(app)

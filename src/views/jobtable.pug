@@ -1,3 +1,4 @@
+- var jobsdataRender = jobsdata || []
 section#statuschart
   table
     thead
@@ -16,6 +17,12 @@ section#statuschart
           input#starttimefilter(type='text')
         td
           input#endtimefilter(type='text')
+        each val in jobsdataRender
+          tr
+            td= val['path']
+            td= val['rundays']
+            td= val['runtime']
+            td= val['zone']
       //- tr
       //-   td /jobs/mycoso/dbbackup/backupall
       //-   td.run Running
