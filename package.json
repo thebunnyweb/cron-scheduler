@@ -14,7 +14,7 @@
     "firebase": "^6.5.0",
     "node-cron": "^2.0.3",
     "pug": "^2.0.4",
-    "shelljs": "^0.8.3"
+    "shelljs": "^0.8.5"
   },
   "devDependencies": {
     "esm": "^3.2.25",
